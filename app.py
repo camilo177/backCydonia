@@ -4,7 +4,7 @@ from flask_cors import CORS
 import logging
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://nboxesapp-camilos-projects-7f95b9ef.vercel.app/"])
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(levelname)s]: %(message)s')
 
@@ -130,4 +130,4 @@ def data():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
